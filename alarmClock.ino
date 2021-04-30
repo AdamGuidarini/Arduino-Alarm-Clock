@@ -36,6 +36,7 @@ bool amPmFlag = 0; // 0 = not changed, 1 = changed
 bool alarm = 0;
 unsigned int alarmMin = 0;
 unsigned int alarmHour = 0;
+char alarmAmPm[3] = "AM";
 
 // Button setup
 int button1 = 3;
@@ -72,12 +73,13 @@ void loop()
 
   // Check for user input
   inputCheck();
-  
-  if (alarm)
+
+  // Check for alarm
+  if (alarm && alarmHour == hours && alarmMin == minutes && alarmAmPm == amPM)
     soundTheAlarm();
   
   // Print time
-  printTime();
+  printTime(hours, minutes, seconds, amPM);
 
   // Add to seconds
   seconds += (millis() / 1000) - timeLoopStart;
