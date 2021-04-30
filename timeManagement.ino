@@ -106,6 +106,9 @@ void changeMinute()
   }
 }
 
+/**
+ * Allow user to change AM/PM with buttons
+ ********************************************************************************/
 void changeAmPm()
 {
   changeAmPmMessage();
