@@ -47,3 +47,20 @@ void changeAmPmMessage()
   lcd.setCursor(0,1);
   lcd.print("OK AM/PM");
 }
+
+/**
+ * Toggle alarm set indicator
+ ********************************************************************************/
+void alarmSetIndicator(bool alarmStatus)
+{
+  if (alarmStatus)
+  {
+    lcd.setCursor(15, 0);
+    lcd.print('*');
+  }
+  else if (!alarmStatus)
+  {
+    lcd.setCursor(15, 0);
+    lcd.print(' ');
+  }
+}
