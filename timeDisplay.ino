@@ -31,28 +31,28 @@ void printTimeUnit(int t, int cursorRow)
 /**
  * Prints current values of hours, minutes, and seconds to LCD
  ********************************************************************************/
-void printTime()
+void printTime(unsigned int hr, unsigned int mn, unsigned int sec, char ap[])
 {
   // Print hour
-  printTimeUnit(hours, 0);
+  printTimeUnit(hr, 0);
 
   // Print :
   lcd.setCursor(2,0);
   lcd.print(':');
 
   // Print minutes
-  printTimeUnit(minutes, 3);
+  printTimeUnit(mn, 3);
 
   // Print :
   lcd.setCursor(5,0);
   lcd.print(':');
 
   // Print seconds
-  printTimeUnit(seconds, 6);
+  printTimeUnit(sec, 6);
 
   // Print AM or PM
   lcd.setCursor(9, 0);
-  lcd.print(amPM);
+  lcd.print(ap);
 }
 
 /**
@@ -72,17 +72,17 @@ void updateAmPm()
 void updateTimes()
 {
   // Update minutes, and hours
-  if (seconds >= 60)
+  while (seconds >= 60)
   {
     minutes++;
     seconds -= 60;  
   }
-  if (minutes >= 60)
+  while (minutes >= 60)
   {
     hours++;
-    minutes = 0;
+    minutes -= 60;
   }
-
+  
   // Update AM/PM
   if (hours == 12 && !minutes && !seconds && amPmFlag)
   {
@@ -94,11 +94,11 @@ void updateTimes()
   if (hours == 12 && !minutes && seconds == 1)
   {
     amPmFlag = 1;
-  }
-
+  }   
+  
   // Set hours back to 1 if greater than 0
-  if (hours > 12)
+  while(hours > 12)
   {
     hours -= 12;
-  }  
+  } 
 }
