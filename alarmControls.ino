@@ -24,3 +24,48 @@ void soundTheAlarm()
     digitalWrite(buzzer, LOW);
   }
 }
+
+/**
+ * Allows user to set or change alarm with buttons
+ ********************************************************************************/
+void setAlarm()
+{
+  wipeBottom();
+  printTime(alarmHour, alarmMin, 0, alarmAmPm);
+
+  alarmHour = changeHour(alarmHour);
+  delay(300);
+
+  alarmMin = changeMinute(alarmMin);
+  delay(300);
+  
+  changeAmPm();
+  delay(300);
+
+  wipeBottom();
+}
+
+void updateAlarmAmPm()
+{
+  changeAmPmMessage();
+
+  lcd.setCursor(9,0);
+  lcd.print(alarmAmPm);
+
+  while(true)
+  {
+    if (digitalRead(button1) == LOW)
+      return;
+
+    if (digitalRead(button2) == LOW)
+    {
+      if(alarmAmPm[0] == 'A')
+        alarmAmPm[0] = 'P';
+      else
+        alarmAmPm[0] = 'A';
+      
+      lcd.setCursor(9,0);
+      lcd.print(alarmAmPm);
+    }
+  }
+}
