@@ -83,10 +83,6 @@ void loop()
   
   // Print time
   printTime(hours, minutes, seconds, amPM);
-
-  // Handle rollover
-  if (timeLoopStart > millis()/1000)
-    seconds++;
   
   // Add to seconds
   seconds += (millis() / 1000) - timeLoopStart;
