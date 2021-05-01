@@ -43,8 +43,14 @@ void setAlarm()
   delay(300);
 
   wipeBottom();
+
+  alarm = 1;
+  alarmSetIndicator(alarm);
 }
 
+/**
+ * Allows user to choose between AM or PM for alarm
+ ********************************************************************************/
 void updateAlarmAmPm()
 {
   changeAmPmMessage();
