@@ -21,7 +21,9 @@ Required Hardware:
 
 Description:
 
-	- Once powered on the program begins counting starting at 12:00:00 AM
+	- Once powered on the program begins counting starting at 12:00:00 AM.
+
+	- Time is displayed in hh:mm:ss 12-hour format.
 
     - The user can use the three buttons to change the time and set the alarm.
 
@@ -49,18 +51,18 @@ On Screen Controls & Indicators:
 
 	Controls:
 	
-		OK - Accept currently selected value
+		OK - Accept currently selected value.
 		
-		-Hour - Decrement hour
+		-Hour - Decrement hour.
 		
-		+Hour - Increment hour
+		+Hour - Increment hour.
 		
-		-Min - Decrement minute
+		-Min - Decrement minute.
 		
-		+Min - Increment minute
+		+Min - Increment minute.
 		
-		AM/PM - Toggle between AM or PM
+		AM/PM - Toggle between AM or PM.
 		
 	Indicators:
 	
-		* - Indicates an alarm is active
+		* - Indicates an alarm is active.
