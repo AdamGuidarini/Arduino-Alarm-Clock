@@ -35,6 +35,8 @@ void changeTime()
 
 /**
  * Allows user to change hour with buttons
+ * 
+ * @param hour 
  ********************************************************************************/
 unsigned int changeHour(unsigned int hour)
 {
@@ -74,6 +76,10 @@ unsigned int changeHour(unsigned int hour)
 
 /**
  * Allows user to change minute with buttons
+ * 
+ * @param minute The minute value to use for initializing 
+ * 
+ * @return the new value for the minute after 
  ********************************************************************************/
 unsigned int changeMinute(unsigned int minute)
 {
