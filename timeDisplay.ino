@@ -30,8 +30,13 @@ void printTimeUnit(int t, int cursorRow)
 
 /**
  * Prints current values of hours, minutes, and seconds to LCD
+ * 
+ * @param hr The hour to display
+ * @param mn The minute to display
+ * @param sec The second to display
+ * @param ap the AM or PM string to display
  ********************************************************************************/
-void printTime(unsigned int hr, unsigned int mn, unsigned int sec, char ap[])
+void printTime(unsigned int hr, unsigned int mn, unsigned long sec, char ap[])
 {
   // Print hour
   printTimeUnit(hr, 0);
