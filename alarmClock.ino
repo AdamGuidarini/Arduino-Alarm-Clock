@@ -24,7 +24,7 @@
 LiquidCrystal lcd(7,8,9,10,11,12);
 
 // Vars for time
-unsigned int seconds = 0;
+unsigned long seconds = 0;
 unsigned int minutes = 0;
 unsigned int hours = 12;
 
@@ -47,7 +47,7 @@ int button3 = 5;
 int buzzer = 6;
 
 // Records time in secods since start of program at beginning of loop
-int timeLoopStart = 0;
+unsigned long timeLoopStart = 0;
 
 /**
  * Initializations to perform at startup
@@ -75,12 +75,19 @@ void loop()
   inputCheck();
 
   // Check for alarm
-  if (alarm && alarmHour == hours && alarmMin == minutes && alarmAmPm == amPM)
-    soundTheAlarm();
+  if (alarm)
+  {
+    if((alarmHour == hours) && (alarmMin == minutes) && (!strcmp(amPM, alarmAmPm)))
+      soundTheAlarm();
+  }
   
   // Print time
   printTime(hours, minutes, seconds, amPM);
 
+  // Handle rollover
+  if (timeLoopStart > millis()/1000)
+    seconds++;
+  
   // Add to seconds
   seconds += (millis() / 1000) - timeLoopStart;
 }
