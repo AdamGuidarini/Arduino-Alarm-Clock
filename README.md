@@ -66,3 +66,17 @@ On Screen Controls & Indicators:
 	Indicators:
 	
 		* - Indicates an alarm is active.
+
+Notes:
+
+    This project is a work in progress, and will likely
+    be updated a several times in the coming week.
+
+Known Bugs:
+
+    - Timer stalls - the clock will occasionally fail to
+      count a second causing it to fall behind.
+
+    - Time freeze - because of my use of the function delay()
+      timer is often halted several times while taking user
+      input. This bug will be patched soon.
