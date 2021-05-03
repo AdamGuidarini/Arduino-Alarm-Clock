@@ -75,11 +75,8 @@ void loop()
   inputCheck();
 
   // Check for alarm
-  if (alarm)
-  {
-    if((alarmHour == hours) && (alarmMin == minutes) && (!strcmp(amPM, alarmAmPm)))
-      soundTheAlarm();
-  }
+  if(alarm && (alarmHour == hours) && (alarmMin == minutes) && (!strcmp(amPM, alarmAmPm)))
+    soundTheAlarm();
   
   // Print time
   printTime(hours, minutes, seconds, amPM);
