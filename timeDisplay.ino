@@ -77,10 +77,10 @@ void updateAmPm()
 void updateTimes()
 {
   // Update minutes, and hours
-  while (seconds >= 60)
+  while (seconds / 1000 >= 60)
   {
     minutes++;
-    seconds -= 60;  
+    seconds -= 60000;  
   }
   while (minutes >= 60)
   {

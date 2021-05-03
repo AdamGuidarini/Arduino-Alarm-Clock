@@ -30,7 +30,7 @@ void changeTime()
   wipeBottom();
   
   // Ensure seconds is set to 0
-  timeLoopStart = millis() / 1000;
+  timeLoopStart = millis();
 }
 
 /**

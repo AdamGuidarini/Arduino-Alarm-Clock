@@ -83,6 +83,5 @@ Notes:
 
 Known Bugs:
 
-    - Timer stalls - the clock will occasionally fail to
-      count a second causing it to fall behind.
+    - No known bugs
    

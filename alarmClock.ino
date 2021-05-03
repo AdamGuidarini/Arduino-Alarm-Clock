@@ -66,7 +66,7 @@ void setup()
  ********************************************************************************/
 void loop() 
 {
-  timeLoopStart = millis()/1000;
+  timeLoopStart = millis();
 
   // Update values of minutes, hours, amPM, and amPmFlag
   updateTimes();
@@ -79,8 +79,8 @@ void loop()
     soundTheAlarm();
   
   // Print time
-  printTime(hours, minutes, seconds, amPM);
+  printTime(hours, minutes, seconds / 1000, amPM);
   
   // Add to seconds
-  seconds += (millis() / 1000) - timeLoopStart;
+  seconds += millis() - timeLoopStart;
 }
