@@ -12,14 +12,11 @@
  ********************************************************************************/
 void soundTheAlarm()
 {
-  for (int i = 0; i < 3; i++)
-  {
-    digitalWrite(buzzer, HIGH);
+  digitalWrite(buzzer, HIGH);
 
-    safe_delay(800);
-    
-    digitalWrite(buzzer, LOW);
-  }
+  safe_delay(800);
+  
+  digitalWrite(buzzer, LOW);
 }
 
 /**
@@ -27,6 +24,9 @@ void soundTheAlarm()
  ********************************************************************************/
 void setAlarm()
 {
+  // Set hour of alarm to 12, prevents setting an alarm at hour 0
+  alarmHour = 12;
+  
   wipeBottom();
   printTime(alarmHour, alarmMin, 0, alarmAmPm);
 
