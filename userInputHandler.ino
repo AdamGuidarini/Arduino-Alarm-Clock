@@ -48,7 +48,7 @@ void inputCheck()
 }
 
 /**
- * SImilar to delay, but instead of halting execution it enters a loop
+ * Similar to delay, but instead of halting execution it enters a loop
  * until the number of milliseconds passed to it have passed.
  * 
  * @param offset The number of milliseconds for which the program will be stopped
