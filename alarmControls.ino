@@ -71,6 +71,8 @@ void updateAlarmAmPm()
       
       lcd.setCursor(9,0);
       lcd.print(alarmAmPm);
+
+      safe_delay(300);
     }
   }
 }
