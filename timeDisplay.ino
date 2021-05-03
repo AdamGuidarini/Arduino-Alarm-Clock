@@ -89,14 +89,14 @@ void updateTimes()
   }
   
   // Update AM/PM
-  if (hours == 12 && !minutes && !seconds && amPmFlag)
+  if (hours == 12 && !minutes && !(seconds / 1000) && amPmFlag)
   {
     updateAmPm();
     amPmFlag = 0;
   }
 
   // Reset AM/PM flag
-  if (hours == 12 && !minutes && seconds == 1)
+  if (hours == 12 && !minutes && (seconds / 1000) == 1)
   {
     amPmFlag = 1;
   }   
