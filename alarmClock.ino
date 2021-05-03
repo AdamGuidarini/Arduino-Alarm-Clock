@@ -39,12 +39,12 @@ unsigned int alarmHour = 0;
 char alarmAmPm[3] = "AM";
 
 // Button setup
-int button1 = 3;
-int button2 = 4;
-int button3 = 5;
+const int button1 = 3;
+const int button2 = 4;
+const int button3 = 5;
 
 // Buzzer pin
-int buzzer = 6;
+const int buzzer = 6;
 
 // Records time in secods since start of program at beginning of loop
 unsigned long timeLoopStart = 0;
