@@ -66,3 +66,26 @@ On Screen Controls & Indicators:
 	Indicators:
 	
 		* - Indicates an alarm is active.
+
+Notes:
+
+     This project is a work in progress, and will likely
+     be updated a several times in the coming week.
+
+     This is my first project with an Arduino and my first
+     project with embedded software, bugs and other issues
+     will be present for a while.
+
+Known Bugs:
+
+    - Timer stalls - the clock will occasionally fail to
+      count a second causing it to fall behind.
+
+    - Time freeze - because of my use of the function delay()
+      timer is often halted several times while taking user
+      input. This bug will be patched soon.
+
+    - Decrementing from 0 occasionally results in a negative
+      value. Because all hour and minute values are stored as
+      unsigned integers, they will revert to positive values
+      once all values are "OK"ed.
