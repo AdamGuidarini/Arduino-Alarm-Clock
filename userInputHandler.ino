@@ -14,21 +14,21 @@ void inputCheck()
   // Change time
   if (digitalRead(button1) == LOW)
   {
-    delay(300);
+    safe_delay(300);
     changeTime();
   }
 
   // Set Alarm
   if (digitalRead(button2) == LOW)
   {
-    delay(300);
+    safe_delay(300);
     setAlarm();
   }
 
   // Enable/disable alarm if set
   if (digitalRead(button3) == LOW)
   {
-    delay(300);
+    safe_delay(300);
     if (alarm)
     {
       alarm = 0;
@@ -45,4 +45,17 @@ void inputCheck()
       }
     }
   }
+}
+
+/**
+ * SImilar to delay, but instead of halting execution it enters a loop
+ * until the number of milliseconds passed to it have passed.
+ * 
+ * @param offset The number of milliseconds for which the program will be stopped
+ ********************************************************************************/
+void safe_delay(unsigned int offset)
+{
+  unsigned long timeAtStart = millis();
+
+  while (millis() <= (timeAtStart + offset));
 }

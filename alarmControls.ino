@@ -15,11 +15,8 @@ void soundTheAlarm()
   for (int i = 0; i < 3; i++)
   {
     digitalWrite(buzzer, HIGH);
-    
-    if (i < 2)
-      delay(250);
-    else
-      delay(499);     
+
+    safe_delay(800);
     
     digitalWrite(buzzer, LOW);
   }
@@ -34,13 +31,13 @@ void setAlarm()
   printTime(alarmHour, alarmMin, 0, alarmAmPm);
 
   alarmHour = changeHour(alarmHour);
-  delay(300);
+  safe_delay(300);
 
   alarmMin = changeMinute(alarmMin);
-  delay(300);
+  safe_delay(300);
   
   changeAmPm();
-  delay(300);
+  safe_delay(300);
 
   wipeBottom();
 

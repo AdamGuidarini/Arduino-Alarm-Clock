@@ -17,15 +17,15 @@ void changeTime()
   
   // Update Hours
   hours = changeHour(hours);
-  delay(300);
+  safe_delay(300);
 
   //Update Minutes
   minutes = changeMinute(minutes);
-  delay(300);
+  safe_delay(300);
 
   // Update AM/PM
   changeAmPm();
-  delay(300);
+  safe_delay(300);
 
   wipeBottom();
   
@@ -56,7 +56,7 @@ unsigned int changeHour(unsigned int hour)
         hour += 12;
        
       printTimeUnit(hour, 0);
-      delay(300);
+      safe_delay(300);
     }    
     
     if (digitalRead(button3) == LOW)
@@ -67,7 +67,7 @@ unsigned int changeHour(unsigned int hour)
         hour -= 12;
 
       printTimeUnit(hour, 0);
-      delay(300);
+      safe_delay(300);
     }
   }
 
