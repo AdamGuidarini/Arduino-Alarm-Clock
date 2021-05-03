@@ -4,7 +4,8 @@ An alarm clock made with an Ardiuno, a breadboard, and various other components.
 
 
 Schematic
-![Cool Allis(1)](https://user-images.githubusercontent.com/45023561/116840723-9354fb00-ab9c-11eb-8ac0-4ff254305247.png)
+![Arduino Alarm Clock](https://user-images.githubusercontent.com/45023561/116890989-d4c4c500-abf3-11eb-8a2a-f5f70812045f.png)
+
 
 Required Hardware:
 
