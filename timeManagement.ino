@@ -36,7 +36,7 @@ void changeTime()
 /**
  * Allows user to change hour with buttons
  * 
- * @param hour 
+ * @param hour The hour 
  ********************************************************************************/
 unsigned int changeHour(unsigned int hour)
 {
