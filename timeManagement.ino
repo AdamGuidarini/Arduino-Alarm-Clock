@@ -99,7 +99,7 @@ unsigned int changeMinute(unsigned int minute)
         minute--;
 
       printTimeUnit(minute, 3);
-      delay(300);     
+      safe_delay(300);     
     }
     
     if (digitalRead(button3) == LOW)
@@ -110,7 +110,7 @@ unsigned int changeMinute(unsigned int minute)
         minute = 0;
 
       printTimeUnit(minute, 3);
-      delay(300);
+      safe_delay(300);
     }
   }
 
@@ -132,7 +132,7 @@ void changeAmPm()
     {
       updateAmPm();
       printTime(hours, minutes, seconds, amPM);
-      delay(300);
+      safe_delay(300);
     }
   }
 }
