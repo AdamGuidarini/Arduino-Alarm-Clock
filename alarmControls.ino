@@ -51,6 +51,7 @@ void setAlarm()
 void updateAlarmAmPm()
 {
   changeAmPmMessage();
+  printTime(alarmHour, alarmMin, 0, alarmAmPm);
 
   lcd.setCursor(9,0);
   lcd.print(alarmAmPm);
