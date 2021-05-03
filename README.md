@@ -4,6 +4,7 @@ An alarm clock made with an Ardiuno, a breadboard, and various other components.
 
 
 Schematic
+
 ![Arduino Alarm Clock](https://user-images.githubusercontent.com/45023561/116890989-d4c4c500-abf3-11eb-8a2a-f5f70812045f.png)
 
 
