@@ -5,7 +5,7 @@ An alarm clock made with an Ardiuno, a breadboard, and various other components.
 
 Schematic
 
-![Arduino Alarm Clock](https://user-images.githubusercontent.com/45023561/116890989-d4c4c500-abf3-11eb-8a2a-f5f70812045f.png)
+![Arduino Alarm Clock](https://user-images.githubusercontent.com/45023561/116891210-0f2e6200-abf4-11eb-8b9f-0b664032c909.png)
 
 
 Required Hardware:
