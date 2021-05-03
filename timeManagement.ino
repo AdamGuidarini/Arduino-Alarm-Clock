@@ -16,11 +16,11 @@ void changeTime()
   printTime(hours, minutes, seconds, amPM);
   
   // Update Hours
-  hours = changeHour(hours);
+  changeHour(hours);
   safe_delay(300);
 
   //Update Minutes
-  minutes = changeMinute(minutes);
+  changeMinute(minutes);
   safe_delay(300);
 
   // Update AM/PM
@@ -39,15 +39,13 @@ void changeTime()
  * 
  * @param hour The hour 
  ********************************************************************************/
-unsigned int changeHour(unsigned int hour)
+void changeHour(unsigned int& hour)
 {
   changeHourMessage();
   while(true)
   {
     if (digitalRead(button1) == LOW)
-    {
       break;
-    }
     
     if (digitalRead(button2) == LOW)
     {
@@ -71,8 +69,6 @@ unsigned int changeHour(unsigned int hour)
       safe_delay(300);
     }
   }
-
-  return hour;
 }
 
 /**
@@ -82,15 +78,13 @@ unsigned int changeHour(unsigned int hour)
  * 
  * @return the new value for the minute after 
  ********************************************************************************/
-unsigned int changeMinute(unsigned int minute)
+void changeMinute(unsigned int& minute)
 {
   changeMinuteMessage();
   while(true)
   {
     if (digitalRead(button1) == LOW)
-    {
       break;
-    }
 
     if (digitalRead(button2) == LOW)
     {
@@ -114,8 +108,6 @@ unsigned int changeMinute(unsigned int minute)
       safe_delay(300);
     }
   }
-
-  return minute;
 }
 
 /**

@@ -30,10 +30,10 @@ void setAlarm()
   wipeBottom();
   printTime(alarmHour, alarmMin, 0, alarmAmPm);
 
-  alarmHour = changeHour(alarmHour);
+  changeHour(alarmHour);
   safe_delay(300);
 
-  alarmMin = changeMinute(alarmMin);
+  changeMinute(alarmMin);
   safe_delay(300);
   
   updateAlarmAmPm();
