@@ -36,7 +36,7 @@ void setAlarm()
   alarmMin = changeMinute(alarmMin);
   safe_delay(300);
   
-  changeAmPm();
+  updateAlarmAmPm();
   safe_delay(300);
 
   wipeBottom();
@@ -51,13 +51,14 @@ void setAlarm()
 void updateAlarmAmPm()
 {
   changeAmPmMessage();
-  printTime(alarmHour, alarmMin, 0, alarmAmPm);
 
   lcd.setCursor(9,0);
   lcd.print(alarmAmPm);
 
   while(true)
   {
+    printTime(alarmHour, alarmMin, 0, alarmAmPm);
+
     if (digitalRead(button1) == LOW)
       return;
 

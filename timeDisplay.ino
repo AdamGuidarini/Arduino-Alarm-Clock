@@ -12,7 +12,7 @@
  * @param t Time passed to for printing
  * @param cursorRow Row of display to start printing from
  ********************************************************************************/
-void printTimeUnit(int t, int cursorRow)
+void printTimeUnit(unsigned int t, int cursorRow)
 {
   if (t < 10)
   {
