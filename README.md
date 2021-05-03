@@ -81,10 +81,6 @@ Known Bugs:
     - Timer stalls - the clock will occasionally fail to
       count a second causing it to fall behind.
 
-    - Time freeze - because of my use of the function delay()
-      timer is often halted several times while taking user
-      input. This bug will be patched soon.
-
     - Decrementing from 0 occasionally results in a negative
       value. Because all hour and minute values are stored as
       unsigned integers, they will revert to positive values
