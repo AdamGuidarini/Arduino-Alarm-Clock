@@ -58,17 +58,23 @@ On Screen Controls & Indicators:
 
 	Controls:
 	
-		OK - Accept currently selected value.
-		
-		-Hour - Decrement hour.
-		
-		+Hour - Increment hour.
-		
-		-Min - Decrement minute.
-		
-		+Min - Increment minute.
-		
-		AM/PM - Toggle between AM or PM.
+      |-------------------------------------------------------------------|
+      |Message   |  Action                              |  Button	  |
+      |		 |					|		  |
+      |-------------------------------------------------------------------|
+      |		 |					|		  |
+      |	OK       |  Accept currently selected value.	| Button 1        |
+      |		 |					|		  |
+      |	-Hour    |  Decrement hour.			| Button 2	  |
+      |		 |					|		  |
+      |	+Hour    |  Increment hour.			| Button 3        |
+      |		 |					|		  |
+      |	-Min     |  Decrement minute.			| Button 2	  |
+      |		 |					|		  |
+      |	+Min     |  Increment minute.			| Button 3	  |
+      |		 |					|		  |
+      | AM/PM    |  Toggle between AM or PM.		| Button 2        |
+      |-------------------------------------------------------------------|
 		
 	Indicators:
 	
