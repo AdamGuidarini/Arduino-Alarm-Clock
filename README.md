@@ -80,8 +80,4 @@ Known Bugs:
 
     - Timer stalls - the clock will occasionally fail to
       count a second causing it to fall behind.
-
-    - Decrementing from 0 occasionally results in a negative
-      value. Because all hour and minute values are stored as
-      unsigned integers, they will revert to positive values
-      once all values are "OK"ed.
+   

@@ -93,10 +93,10 @@ unsigned int changeMinute(unsigned int minute)
 
     if (digitalRead(button2) == LOW)
     {
-      minute--;
-
       if (minute == 0)
         minute = 59;
+      else
+        minute--;
 
       printTimeUnit(minute, 3);
       delay(300);     
