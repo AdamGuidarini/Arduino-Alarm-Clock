@@ -57,5 +57,25 @@ void safe_delay(unsigned int offset)
 {
   unsigned long timeAtStart = millis();
 
-  while (millis() <= (timeAtStart + offset));
+  while (millis() < (timeAtStart + offset))
+  {
+    if (millis() < timeAtStart)
+      rolloverProtection(timeAtStart, seconds);
+  }
+}
+
+/**
+ * Designed to handle rollover by adding current value of millis() and difference
+ * between unsigned long max value minus older value of millis to secs.
+ * 
+ * @param val Ideally an older value of millis. Difference between it and millis()
+ *            will be added to secs.
+ * @param milliSecs A millisecond counter to be corrected at moment of millis()           
+ *                  rollover.
+ ********************************************************************************/
+void rolloverProtection(unsigned long val, unsigned long& milliSecs)
+{
+  const unsigned long longMax = 0xffffffff;
+  
+  milliSecs += (millis() + (longMax - val));
 }
