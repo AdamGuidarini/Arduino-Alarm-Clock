@@ -91,5 +91,5 @@ Notes:
 
 Known Bugs:
 
-    - No known bugs
+    - Clock runs slow
    
