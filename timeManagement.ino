@@ -39,7 +39,7 @@ void changeTime()
  * 
  * @param hour The hour 
  ********************************************************************************/
-void changeHour(unsigned int& hour)
+void changeHour(uint8_t& hour)
 {
   changeHourMessage();
   while(true)
@@ -78,7 +78,7 @@ void changeHour(unsigned int& hour)
  * 
  * @return the new value for the minute after 
  ********************************************************************************/
-void changeMinute(unsigned int& minute)
+void changeMinute(uint8_t& minute)
 {
   changeMinuteMessage();
   while(true)

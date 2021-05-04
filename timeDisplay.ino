@@ -77,11 +77,16 @@ void updateAmPm()
 void updateTimes()
 {
   // Update minutes, and hours
+
+  // Store millis to add lost time back in
+  uint32_t millisPreLoop = millis();
   while (seconds / 1000 >= 60)
   {
     minutes++;
     seconds -= 60000;  
   }
+  seconds += millis() - millisPreLoop;
+  
   while (minutes >= 60)
   {
     hours++;

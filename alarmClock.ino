@@ -17,6 +17,7 @@
  ********************************************************************************/
 
 #include<LiquidCrystal.h>
+#include<stdint.h>
 #include<string.h>
 
 // Set up LCD
@@ -25,8 +26,8 @@ LiquidCrystal lcd(7,8,9,10,11,12);
 
 // Vars for time
 unsigned long seconds = 0;
-unsigned int minutes = 0;
-unsigned int hours = 12;
+uint8_t minutes = 0;
+uint8_t hours = 12;
 
 // AM/PM controls
 char amPM[3] = "AM";
@@ -34,17 +35,17 @@ bool amPmFlag = 0; // 0 = not changed, 1 = changed
 
 // Vars for alarm time
 bool alarm = 0;
-unsigned int alarmMin = 0;
-unsigned int alarmHour = 0;
+uint8_t alarmMin = 0;
+uint8_t alarmHour = 0;
 char alarmAmPm[3] = "AM";
 
 // Button setup
-const int button1 = 3;
-const int button2 = 4;
-const int button3 = 5;
+const uint8_t button1 = 3;
+const uint8_t button2 = 4;
+const uint8_t button3 = 5;
 
 // Buzzer pin
-const int buzzer = 6;
+const uint8_t buzzer = 6;
 
 // Records time in secods since start of program at beginning of loop
 unsigned long timeLoopStart = 0;
