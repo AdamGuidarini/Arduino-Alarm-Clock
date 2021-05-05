@@ -50,6 +50,7 @@ const uint8_t buzzer = 6;
 
 // Records time in secods since start of program at beginning of loop
 volatile unsigned long timeLoopStart = 0;
+unsigned long prevTimeLoopStart = 0;
 
 /**
  * Initializations to perform at startup
@@ -85,12 +86,9 @@ void loop()
   printTime(hours, minutes, seconds, amPM);
 
   // Check for rollover
-  if (millis() < timeLoopStart)
-  {
-    rolloverProtection(timeLoopStart, millisec);
-    timeLoopStart = 0;                                    
-  }
+  rolloverProtection(timeLoopStart, prevTimeLoopStart);
   
   // Add to seconds
+  prevTimeLoopStart = timeLoopStart;
   millisec += millis() - timeLoopStart;
 }

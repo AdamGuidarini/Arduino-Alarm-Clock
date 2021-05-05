@@ -59,9 +59,10 @@ void safe_delay(unsigned int offset)
  * @param milliSecs A millisecond counter to be corrected at moment of millis()           
  *                  rollover.
  ********************************************************************************/
-void rolloverProtection(unsigned long val, unsigned long& milliSecs)
+void rolloverProtection(unsigned long newMillis, unsigned long oldMillis)
 {
   const unsigned long longMax = 0xffffffff;
-  
-  milliSecs += (millis() + (longMax - val));
+
+  if (newMillis < oldMillis)
+    millisec += (millis() + (longMax - oldMillis));
 }
