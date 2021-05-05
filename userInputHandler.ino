@@ -28,22 +28,7 @@ void inputCheck()
   // Enable/disable alarm if set
   if (digitalRead(button3) == LOW)
   {
-    safe_delay(300);
-    if (alarm)
-    {
-      alarm = 0;
-      alarmSetIndicator(alarm);
-    }
-    else if (!alarm)
-    {
-      if (!alarmHour)
-        return;
-      else
-      {
-        alarm = 1;
-        alarmSetIndicator(alarm);
-      }
-    }
+    toggleAlarm();
   }
 }
 

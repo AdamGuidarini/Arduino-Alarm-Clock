@@ -76,3 +76,26 @@ void updateAlarmAmPm()
     }
   }
 }
+
+/**
+ * Allows user to toggle alarm on or off
+ ********************************************************************************/
+void toggleAlarm()
+{
+  safe_delay(300);
+  if (alarm)
+  {
+    alarm = 0;
+    alarmSetIndicator(alarm);
+  }
+  else if (!alarm)
+  {
+    if (!alarmHour)
+      return;
+    else
+    {
+      alarm = 1;
+      alarmSetIndicator(alarm);
+    }
+  }
+}
