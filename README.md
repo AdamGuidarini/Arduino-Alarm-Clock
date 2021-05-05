@@ -58,23 +58,22 @@ On Screen Controls & Indicators:
 
 	Controls:
 	
-      |-------------------------------------------------------------------|
-      |Message   |  Action                              |  Button         |
-      |          |                                      |                 |
-      |-------------------------------------------------------------------|
-      |          |                                      |                 |
-      | OK       |  Accept currently selected value.    | Button 1        |
-      |          |                                      |                 |
-      | -Hour    |  Decrement hour.                     | Button 2        |
-      |          |                                      |                 |
-      | +Hour    |  Increment hour.                     | Button 3        |
-      |          |                                      |                 |
-      | -Min     |  Decrement minute.                   | Button 2        |
-      |          |                                      |                 |
-      | +Min     |  Increment minute.                   | Button 3        |
-      |          |                                      |                 |
-      | AM/PM    |  Toggle between AM or PM.            | Button 2        |
-      |-------------------------------------------------------------------|
+      |---------------------------------------------------------------|
+      | Message  |  Action                              | Button      |
+      |---------------------------------------------------------------|
+      |          |                                      |             |
+      | OK       |  Accept currently selected value.    | Button 1    |
+      |          |                                      |             |
+      | -Hour    |  Decrement hour.                     | Button 2    |
+      |          |                                      |             |
+      | +Hour    |  Increment hour.                     | Button 3    |
+      |          |                                      |             |
+      | -Min     |  Decrement minute.                   | Button 2    |
+      |          |                                      |             |
+      | +Min     |  Increment minute.                   | Button 3    |
+      |          |                                      |             |
+      | AM/PM    |  Toggle between AM or PM.            | Button 2    |
+      |---------------------------------------------------------------|
 		
 	Indicators:
 	
@@ -91,5 +90,5 @@ Notes:
 
 Known Bugs:
 
-    - Clock runs slow
+    - Clock runs slowly. In a 12 hour test the clock lagged behind by 38 seconds.
    
