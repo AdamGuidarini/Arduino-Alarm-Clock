@@ -106,7 +106,7 @@ Setting OFFSET:
          + By default it will say: #define OFFSET 53.
        - Replace 53 with 0.
        - Set the clock based on a computer or other device's time.
-       - Run for one hour and compare results.
+       - Run for at least one hour and compare results.
        - Calculate the difference in milliseconds for each minute:
        	 + 1000 * ([difference in seconds] / ([hours tested] * 60 * 60)) = millisecond offset
        - Return to line 24 of alarmClock.ino and set OFFSET to the result from the formula above.
