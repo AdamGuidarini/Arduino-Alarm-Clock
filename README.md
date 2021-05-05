@@ -94,11 +94,22 @@ Notes:
 Setting OFFSET:
 
      - The offset must will likely be different on each board, this will
-       require changing OFFSET which is located on alarmClock.ino.
-
+       require changing OFFSET which is located in alarmClock.ino.
+       
      - OFFSET is the number of milliseconds that the clock is off by every minute.
        this value is added back into the millisecond counter after each minute.
        
+     Sets for setting OFFSET:
+     
+       - Open alarmClock.ino.
+       - Scroll to line 24.
+         + By default it will say: #define OFFSET 53.
+       - Replace 53 with 0.
+       - Set the clock based on a computer or other device's time.
+       - Run for one hour and compare results.
+       - Calculate the difference in milliseconds for each minute:
+       	 + 1000 * ([difference in seconds] / ([hours tested] * 60 * 60)) = millisecond offset
+       - Return to line 24 of alarmClock.ino and set OFFSET to the result from the formula above.
 
 Known Bugs/Issues:
 
