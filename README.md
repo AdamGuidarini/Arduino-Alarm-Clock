@@ -99,7 +99,7 @@ Setting OFFSET:
      - OFFSET is the number of milliseconds that the clock is off by every minute.
        this value is added back into the millisecond counter after each minute.
        
-     Sets for setting OFFSET:
+     Steps for setting OFFSET:
      
        - Open alarmClock.ino.
        - Scroll to line 24.
