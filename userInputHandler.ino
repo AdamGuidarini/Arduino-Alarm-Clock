@@ -28,6 +28,7 @@ void inputCheck()
   // Enable/disable alarm if set
   if (digitalRead(button3) == LOW)
   {
+    safe_delay(300);
     toggleAlarm();
   }
 }

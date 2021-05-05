@@ -82,7 +82,6 @@ void updateAlarmAmPm()
  ********************************************************************************/
 void toggleAlarm()
 {
-  safe_delay(300);
   if (alarm)
   {
     alarm = 0;
