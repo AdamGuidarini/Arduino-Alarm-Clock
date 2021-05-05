@@ -49,8 +49,8 @@ const uint8_t button3 = 5;
 const uint8_t buzzer = 6;
 
 // Records time in secods since start of program at beginning of loop
-volatile unsigned long timeLoopStart = 0;
-unsigned long prevTimeLoopStart = 0;
+volatile unsigned long currentMillis = 0;
+unsigned long prevMillis = 0;
 
 /**
  * Initializations to perform at startup
@@ -70,8 +70,8 @@ void setup()
 void loop() 
 {  
 
-  timeLoopStart = millis();
-
+  currentMillis = millis();
+    
   // Update values of minutes, hours, amPM, and amPmFlag
   updateTimes();
 
@@ -85,10 +85,5 @@ void loop()
   // Print time
   printTime(hours, minutes, seconds, amPM);
 
-  // Check for rollover
-  rolloverProtection(timeLoopStart, prevTimeLoopStart);
-  
-  // Add to seconds
-  prevTimeLoopStart = timeLoopStart;
-  millisec += millis() - timeLoopStart;
+  prevMillis = currentMillis;
 }

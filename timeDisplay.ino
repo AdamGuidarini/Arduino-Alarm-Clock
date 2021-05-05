@@ -72,24 +72,33 @@ void updateAmPm()
 }
 
 /**
- * Update values of minutes, hours, amPM, and amPmFlag
+ * Update values of millisecs, seconds, minutes, hours, amPM, and amPmFlag
  ********************************************************************************/
 void updateTimes()
 {
-  // Update minutes, and hours
+  // Updates milliseconds
 
+  // Check for rollover
+  if (currentMillis < prevMillis)
+    millisec += (currentMillis + (0xffffffff - prevMillis));
+  else
+    millisec += currentMillis - prevMillis;
+
+  
   while (millisec >= 1000)
   {
     seconds++;
     millisec -= 1000;
   }
 
+  // Update seconds
   while (seconds >= 60)
   {
     minutes++;
     seconds -= 60;  
   }
 
+  // Update minutes
   while (minutes >= 60)
   {
     hours++;
