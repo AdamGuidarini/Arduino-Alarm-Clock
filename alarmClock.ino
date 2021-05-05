@@ -20,6 +20,9 @@
 #include<stdint.h>
 #include<string.h>
 
+// Offset for Arduino drifting from real time
+#define OFFSET 53
+
 // Set up LCD
 // Values passed to LCD are pins on Arduino
 LiquidCrystal lcd(7,8,9,10,11,12);
@@ -28,7 +31,7 @@ LiquidCrystal lcd(7,8,9,10,11,12);
 unsigned long millisec = 0;
 uint8_t seconds = 0;
 uint8_t minutes = 0;
-uint8_t hours = 12;
+uint8_t hours = 12; 
 
 // AM/PM controls
 char amPM[3] = "AM";

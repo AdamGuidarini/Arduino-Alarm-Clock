@@ -95,7 +95,9 @@ void updateTimes()
   while (seconds >= 60)
   {
     minutes++;
-    seconds -= 60;  
+    seconds -= 60;
+    // Add in millliseconds to account for Arduino running slow
+    millisec += OFFSET;  
   }
 
   // Update minutes
@@ -118,7 +120,7 @@ void updateTimes()
     amPmFlag = 1;
   }   
   
-  // Set hours back to 1 if greater than 0
+  // Set hours back to 1 if greater than 12
   while(hours > 12)
   {
     hours -= 12;
