@@ -79,19 +79,21 @@ void updateTimes()
   // Update minutes, and hours
 
   // Store millis to add lost time back in
-  uint32_t millisPreLoop = millis();
-  while (seconds / 1000 >= 60)
+  volatile uint32_t millisPreLoop = millis();
+  while (seconds >= 60000)
   {
     minutes++;
     seconds -= 60000;  
   }
   seconds += millis() - millisPreLoop;
-  
+
+  millisPreLoop = millis();
   while (minutes >= 60)
   {
     hours++;
     minutes -= 60;
   }
+  seconds += millis() - millisPreLoop;
   
   // Update AM/PM
   if (hours == 12 && !minutes && !(seconds / 1000) && amPmFlag)

@@ -48,7 +48,7 @@ const uint8_t button3 = 5;
 const uint8_t buzzer = 6;
 
 // Records time in secods since start of program at beginning of loop
-unsigned long timeLoopStart = 0;
+volatile unsigned long timeLoopStart = 0;
 
 /**
  * Initializations to perform at startup
