@@ -25,7 +25,8 @@
 LiquidCrystal lcd(7,8,9,10,11,12);
 
 // Vars for time
-unsigned long seconds = 0;
+unsigned long millisec = 0;
+uint8_t seconds = 0;
 uint8_t minutes = 0;
 uint8_t hours = 12;
 
@@ -66,7 +67,8 @@ void setup()
  * Main function performs actions in a loop while powered on
  ********************************************************************************/
 void loop() 
-{
+{  
+
   timeLoopStart = millis();
 
   // Update values of minutes, hours, amPM, and amPmFlag
@@ -80,15 +82,15 @@ void loop()
     soundTheAlarm();
   
   // Print time
-  printTime(hours, minutes, seconds / 1000, amPM);
+  printTime(hours, minutes, seconds, amPM);
 
   // Check for rollover
   if (millis() < timeLoopStart)
   {
-    rolloverProtection(timeLoopStart, seconds);
+    rolloverProtection(timeLoopStart, millisec);
     timeLoopStart = 0;                                    
   }
   
   // Add to seconds
-  seconds += millis() - timeLoopStart;
+  millisec += millis() - timeLoopStart;
 }

@@ -46,7 +46,7 @@ void safe_delay(unsigned int offset)
   while (millis() < (timeAtStart + offset))
   {
     if (millis() < timeAtStart)
-      rolloverProtection(timeAtStart, seconds);
+      rolloverProtection(timeAtStart, millisec);
   }
 }
 
