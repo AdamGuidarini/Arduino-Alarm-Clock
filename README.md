@@ -3,7 +3,7 @@
 An alarm clock made with an Ardiuno, a breadboard, and various other components.
 
 
-Schematic
+Schematic:
 
 ![Arduino Alarm Clock](https://user-images.githubusercontent.com/45023561/116891210-0f2e6200-abf4-11eb-8b9f-0b664032c909.png)
 
@@ -81,14 +81,27 @@ On Screen Controls & Indicators:
 
 Notes:
 
-     This project is a work in progress, and will likely
-     be updated a several times in the coming week.
+     - This project is a work in progress, and will likely
+      be updated a several times in the coming week.
 
-     This is my first project with an Arduino and my first
-     project with embedded software, bugs and other issues
-     will be present for a while.
+     - This is my first project with an Arduino and my first
+       project with embedded software, bugs and other issues
+       will be present for a while.
+	
+     - Because this project was not designed with an RTC, an offset
+       to prevent the clock from drifting too far from real time.
 
-Known Bugs:
+Setting OFFSET:
 
-    - Clock runs slowly. In a 12 hour test the clock lagged behind by 38 seconds.
+     - The offset must will likely be different on each board, this will
+       require changing OFFSET which is located on alarmClock.ino.
+
+     - OFFSET is the number of milliseconds that the clock is off by every minute.
+       this value is added back into the millisecond counter after each minute.
+       
+
+Known Bugs/Issues:
+
+    - Due to the lack of an RTC in this porject, the clock cannot be 100% accurate
+      see "Setting OFFSET" for more details.
    
